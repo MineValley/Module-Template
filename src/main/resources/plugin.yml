@@ -1,0 +1,3 @@
+name: Module-Template
+version: '${project.version}'
+main: minevalley.vince.template.Template
