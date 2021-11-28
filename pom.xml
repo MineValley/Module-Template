@@ -76,9 +76,8 @@
         </dependency>
         <dependency>
             <groupId>eu.minevalley</groupId>
-            <artifactId>core-api</artifactId>
+            <artifactId>Core-API</artifactId>
             <version>LATEST</version>
-            <classifier>core</classifier>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
