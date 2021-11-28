@@ -1,6 +1,6 @@
 package minevalley.vince.template.utils;
 
-import eu.minevalley.core.api.Core;
+import minevalley.core.api.Core;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.inventory.ItemStack;

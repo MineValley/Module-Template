@@ -1,6 +1,6 @@
 package minevalley.vince.template.module.listeners;
 
-import eu.minevalley.core.api.events.UserRefreshEvent;
+import minevalley.core.api.events.UserRefreshEvent;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 

@@ -1,7 +1,7 @@
 package minevalley.vince.template.utils;
 
-import eu.minevalley.core.api.Core;
-import eu.minevalley.core.api.database.Value;
+import minevalley.core.api.Core;
+import minevalley.core.api.database.Value;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

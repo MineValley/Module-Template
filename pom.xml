@@ -54,16 +54,8 @@
 
     <repositories>
         <repository>
-            <id>core-repo</id>
-            <url>http://minevalley.eu/repositories</url>
-        </repository>
-        <repository>
-            <id>paper-repo</id>
+            <id>paper</id>
             <url>https://papermc.io/repo/repository/maven-public/</url>
-        </repository>
-        <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
     </repositories>
 
@@ -75,8 +67,8 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>eu.minevalley</groupId>
-            <artifactId>Core-API</artifactId>
+            <groupId>minevalley.core</groupId>
+            <artifactId>api</artifactId>
             <version>LATEST</version>
         </dependency>
         <dependency>
