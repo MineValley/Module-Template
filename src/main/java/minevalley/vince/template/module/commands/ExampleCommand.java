@@ -21,13 +21,13 @@ import java.util.List;
 public class ExampleCommand extends PlayerCommand {
 
     @Override
-    public Command.CommandResponse onCommand(User user, String[] strings) {
+    public Command.CommandResponse onCommand(User user, String[] args) {
         // Command logic
         return Command.CommandResponse.SUCCESS;
     }
 
     @Override
-    public List<String> onTabComplete(User user, String[] strings) {
+    public List<String> onTabComplete(User user, String[] args) {
         // Define tab-completions
         return null;
     }
