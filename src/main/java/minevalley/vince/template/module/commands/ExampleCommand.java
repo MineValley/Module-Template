@@ -15,7 +15,8 @@ import java.util.List;
         playerRank = {}, // this can be omitted (default value is {})
         fractions = {Fraction.POLICE},
         teamRanks = {TeamRank.DEVELOPMENT, TeamRank.ADMINISTRATION, TeamRank.SERVER_LEAD},
-        syntax = "example <necessary argument> [<unnecessary argument>]",
+        syntax = "example <necessary argument> [<unnecessary argument>]", //correct syntax
+        correctSyntaxLength = 0, // correct number of arguments
         abuseWarning = true // warning is sent into team-chat if user tries to perform this command without permission
 )
 public class ExampleCommand extends PlayerCommand {
