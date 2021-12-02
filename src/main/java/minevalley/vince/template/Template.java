@@ -3,11 +3,12 @@ package minevalley.vince.template;
 import minevalley.core.api.Core;
 import minevalley.core.api.CoreModule;
 import minevalley.core.api.CoreServer;
+import minevalley.core.api.Description;
 import minevalley.vince.template.module.commands.ExampleCommand;
 import minevalley.vince.template.module.listeners.PlayerJoinListener;
 import minevalley.vince.template.module.listeners.UserRefreshListener;
 
-@CoreModule.Description(
+@Description(
         name = "Template",
         authors = "vince",
         version = "1.0"
