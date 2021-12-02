@@ -21,6 +21,7 @@ public final class Template extends CoreModule {
     // TODO: Rename package
     // TODO: Rename main-class
     // TODO: Edit Description-annotation
+    // TODO: Update Core-API in pom.xml to newest version
     // TODO: Add artifact (Click on the module and press F4)
 
     @Override
