@@ -19,10 +19,10 @@ public final class Template extends CoreModule {
         super(server);
     }
 
-    // TODO: Rename package
+    // TODO: Rename package (author and module name)
     // TODO: Rename main-class
-    // TODO: Edit Description-annotation
-    // TODO: Update Core-API in pom.xml to newest version
+    // TODO: Edit Description-annotation of main class
+    // TODO: Update Core-API in pom.xml to newest version (https://github.com/MineValley/Core-API/packages/)
     // TODO: Add artifact (Click on the module and press F4)
 
     @Override
