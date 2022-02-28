@@ -47,6 +47,7 @@
             <groupId>minevalley.core</groupId>
             <artifactId>api</artifactId>
             <version>1.79</version>
+            <!-- Don't use LATEST here -->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
