@@ -10,16 +10,16 @@ import minevalley.core.api.utils.command.PlayerCommand;
 import java.util.List;
 
 @CommandOptions(
-        commands = {"example", "ex"}, // command-spelling and aliases (Always have to be written in lower case!)
-        successMessage = "", // message to print, if onCommand() returns SUCCESS
+        commands = {"example", "ex"},   // command-spelling and aliases (Always have to be written in lower case!)
+        successMessage = "",    // message to print, if onCommand() returns SUCCESS
         fractions = {FractionService.POLICE},
         teamRanks = {TeamRank.DEVELOPMENT, TeamRank.ADMINISTRATION, TeamRank.SERVER_LEAD},
-        requireSupportService = false, // user has to be in support service (if false, option can be omitted)
-        requireTeamService = false, // user has to be in team service (if true, the teamranks-option is redundant)
-        ignoreRanks = false, // command is accessible for everyone without any specific rank (makes ranks-options redundant)
-        syntax = "example <necessary argument> [<unnecessary argument>]", //correct syntax
-        correctSyntaxLength = 0, // correct number of arguments
-        abuseWarning = true // warning is sent into team-chat if user tries to perform this command without permission
+        requireSupportService = false,  // user has to be in support service (if false, option can be omitted)
+        requireTeamService = false,     // user has to be in team service (if true, the teamranks-option is redundant)
+        ignoreRanks = false,    // command is accessible for everyone without any specific rank (makes all ranks-options redundant)
+        syntax = "example <necessary argument> [<unnecessary argument>]",   //correct syntax
+        correctSyntaxLength = 0,    // correct number of arguments
+        abuseWarning = false     // warning is sent into team-chat if user tries to perform this command without permission
 
 )
 public class ExampleCommand extends PlayerCommand {
