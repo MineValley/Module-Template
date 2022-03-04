@@ -12,7 +12,6 @@ import java.util.List;
 @CommandOptions(
         commands = {"example", "ex"}, // command-spelling and aliases (Always have to be written in lower case!)
         successMessage = "", // message to print, if onCommand() returns SUCCESS
-        playerRank = {}, // this can be omitted (default value is {})
         fractions = {FractionService.POLICE},
         teamRanks = {TeamRank.DEVELOPMENT, TeamRank.ADMINISTRATION, TeamRank.SERVER_LEAD},
         requireSupportService = false, // user has to be in support service (if false, option can be omitted)
