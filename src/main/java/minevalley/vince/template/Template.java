@@ -5,7 +5,7 @@ import minevalley.core.api.CoreModule;
 import minevalley.core.api.CoreServer;
 import minevalley.core.api.Description;
 import minevalley.vince.template.module.commands.ExampleCommand;
-import minevalley.vince.template.module.listeners.PlayerJoinListener;
+import minevalley.vince.template.module.listeners.LoggingListeners;
 import minevalley.vince.template.module.listeners.UserRefreshListener;
 
 @Description(
@@ -32,8 +32,8 @@ public final class Template extends CoreModule {
 
         new ExampleCommand(); // Commands are registered by creating an new instance of the commands class
 
-        Core.registerListeners(new PlayerJoinListener()); // Listener-registrations
-        Core.registerListeners(new UserRefreshListener());
+        Core.registerListeners(new UserRefreshListener()); // Listener-registrations
+        LoggingListeners.initListeners();
     }
 
     @Override
