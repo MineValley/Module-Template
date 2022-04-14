@@ -1,10 +1,11 @@
 package minevalley.vince.template.core.enums;
 
-import lombok.AllArgsConstructor;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
-@AllArgsConstructor
+@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum Example {
 
     EXAMPLE_1(1),

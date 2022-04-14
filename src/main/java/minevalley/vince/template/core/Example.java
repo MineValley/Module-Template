@@ -7,9 +7,9 @@ import lombok.Setter;
 
 import java.util.Map;
 
-@AllArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
 public class Example {
 
     private static Map<String, Example> cachedExamples = Maps.newHashMap();

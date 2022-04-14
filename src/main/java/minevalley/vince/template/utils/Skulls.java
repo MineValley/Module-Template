@@ -1,12 +1,13 @@
 package minevalley.vince.template.utils;
 
-import lombok.AllArgsConstructor;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import minevalley.core.api.Core;
 import org.bukkit.inventory.ItemStack;
 
-@AllArgsConstructor
 @Getter
+@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum Skulls {
 
     /**
