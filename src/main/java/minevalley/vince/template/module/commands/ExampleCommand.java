@@ -20,7 +20,6 @@ import java.util.List;
         syntax = "example <necessary argument> [<unnecessary argument>]",   //correct syntax
         correctSyntaxLength = 0,    // correct number of arguments
         abuseWarning = false     // warning is sent into team-chat if user tries to perform this command without permission
-
 )
 public class ExampleCommand extends PlayerCommand {
 
