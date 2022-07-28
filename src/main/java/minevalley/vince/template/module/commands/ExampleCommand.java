@@ -1,5 +1,6 @@
 package minevalley.vince.template.module.commands;
 
+import minevalley.core.api.OnlineUser;
 import minevalley.core.api.User;
 import minevalley.core.api.enums.FractionService;
 import minevalley.core.api.enums.TeamRank;
@@ -24,7 +25,7 @@ import java.util.List;
 public class ExampleCommand extends PlayerCommand {
 
     @Override
-    public Command.CommandResponse onCommand(User user, String[] args) {
+    public Command.CommandResponse onCommand(OnlineUser user, String[] args) {
 
         // Command logic
 
@@ -33,7 +34,7 @@ public class ExampleCommand extends PlayerCommand {
 
     // Can be omitted
     @Override
-    public List<String> onTabComplete(User user, String[] args) {
+    public List<String> onTabComplete(OnlineUser user, String[] args) {
 
         // Define tab-completions
 
@@ -42,7 +43,7 @@ public class ExampleCommand extends PlayerCommand {
 
     // Can be omitted
     @Override
-    public boolean isPermissioned(User user) {
+    public boolean isPermissioned(OnlineUser user) {
 
         // Define specific checks
 
