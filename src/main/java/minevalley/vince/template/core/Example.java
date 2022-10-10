@@ -12,7 +12,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class Example {
 
-    private static Map<String, Example> cachedExamples = Maps.newHashMap();
+    private final static Map<String, Example> cachedExamples = Maps.newHashMap();
 
     private final String string;
     private final int integer;
