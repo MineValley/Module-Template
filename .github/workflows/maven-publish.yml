@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: debian-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install Java and Maven
