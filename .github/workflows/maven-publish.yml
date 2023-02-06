@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Java and Maven
-        run: |
-          sudo apt-get install maven
-      - name: Build and package Java app
+      - name: Install Maven
+        run: sudo apt-get install maven
+      - name: Build and package
         run: mvn package
       - name: Deploy Java app to server
         uses: appleboy/scp-action@master
