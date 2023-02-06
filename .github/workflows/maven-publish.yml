@@ -6,8 +6,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install Java and Maven
       - name: Build and package Java app
         run: mvn package
       - name: Deploy Java app to server
