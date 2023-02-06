@@ -4,14 +4,10 @@ on: [push]
 
 jobs:
   build-and-deploy:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install Java and Maven
-        run: |
-          sudo apt-get update
-          sudo apt-get install default-jdk
-          sudo apt-get install maven
       - name: Build and package Java app
         run: mvn package
       - name: Deploy Java app to server
