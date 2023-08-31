@@ -1,8 +1,8 @@
 package minevalley.vince.template.module.commands;
 
-import minevalley.core.api.OnlineUser;
 import minevalley.core.api.enums.FractionService;
 import minevalley.core.api.enums.TeamRank;
+import minevalley.core.api.users.OnlineUser;
 import minevalley.core.api.utils.command.Command;
 import minevalley.core.api.utils.command.CommandOptions;
 import minevalley.core.api.utils.command.PlayerCommand;
@@ -48,6 +48,7 @@ public class ExampleCommand extends PlayerCommand {
 
         return true;
     }
+
 
 
 }
