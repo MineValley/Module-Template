@@ -1,7 +1,6 @@
 package minevalley.vince.template.module.commands;
 
 import minevalley.core.api.OnlineUser;
-import minevalley.core.api.User;
 import minevalley.core.api.enums.FractionService;
 import minevalley.core.api.enums.TeamRank;
 import minevalley.core.api.utils.command.Command;
@@ -25,7 +24,7 @@ import java.util.List;
 public class ExampleCommand extends PlayerCommand {
 
     @Override
-    public Command.CommandResponse onCommand(OnlineUser user, String[] args) {
+    public CommandResponse onCommand(OnlineUser onlineUser, String[] strings) {
 
         // Command logic
 
@@ -49,4 +48,6 @@ public class ExampleCommand extends PlayerCommand {
 
         return true;
     }
+
+
 }
