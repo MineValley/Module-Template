@@ -33,7 +33,7 @@ public final class Template extends CoreModule {
 
         new ExampleCommand(); // Commands are registered by creating a new instance of the commands class
 
-        Core.registerListeners(new UserRefreshListener()); // Listener-registrations
+        Core.registerListener(new UserRefreshListener()); // Listener-registrations
         LoggingListeners.initListeners();
     }
 
