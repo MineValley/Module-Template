@@ -9,7 +9,7 @@
         <module.author>vince</module.author>
         <module.version>1.0</module.version>
 
-        <api.version>1.255</api.version>
+        <api.version>1.280.0</api.version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
