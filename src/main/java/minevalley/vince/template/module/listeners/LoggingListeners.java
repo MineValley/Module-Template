@@ -8,11 +8,11 @@ import org.bukkit.event.player.PlayerQuitEvent;
 public final class LoggingListeners {
 
     public static void initListeners() {
-        Core.registerEvent(PlayerJoinEvent.class, (EventListener<PlayerJoinEvent>) event -> {
+        Core.registerListener(PlayerJoinEvent.class, (EventListener<PlayerJoinEvent>) event -> {
             // Logic here
         });
 
-        Core.registerEvent(PlayerQuitEvent.class, (EventListener<PlayerQuitEvent>) event -> {
+        Core.registerListener(PlayerQuitEvent.class, (EventListener<PlayerQuitEvent>) event -> {
             // Logic here
         });
     }
