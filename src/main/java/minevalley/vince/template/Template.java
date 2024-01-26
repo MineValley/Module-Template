@@ -13,6 +13,7 @@ import minevalley.vince.template.module.listeners.UserRefreshListener;
         authors = "vince",
         version = "1.0"
 )
+@SuppressWarnings("unused")
 public final class Template extends CoreModule {
 
     public Template(CoreServer server) {
