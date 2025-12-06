@@ -4,66 +4,100 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <properties>
-        <module.name>template</module.name>
-        <module.author>vince</module.author>
-        <module.version>1.0</module.version>
+    <groupId>minevalley.author</groupId>
+    <artifactId>template</artifactId>
+    <version>0.0.0</version>
+    <packaging>jar</packaging>
 
-        <api.version>1.280.0</api.version>
-        <java.version>1.8</java.version>
+    <name>Template</name>
+    <description>Module-Template zur vereinfachten Erstellung neuer Module</description>
+
+    <properties>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <groupId>minevalley.${module.author}</groupId>
-    <artifactId>${module.name}</artifactId>
-    <version>${module.version}</version>
-    <packaging>jar</packaging>
-
-    <name>${module.name}</name>
+    <developers>
+        <developer>
+            <name>vince</name>
+            <properties>
+                <uuid>e0ae458e-214c-409e-ad6d-4091a6719bb0</uuid>
+                <discord>290192462637694977</discord>
+            </properties>
+        </developer>
+    </developers>
 
     <repositories>
         <repository>
-            <id>paper</id>
-            <url>https://papermc.io/repo/repository/maven-public/</url>
+            <id>paper-mc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
+            <id>core-api</id>
+            <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
+            <releases>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
-    <build>
-        <directory>${pom.basedir}</directory>
-        <finalName>${module.name}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
     <dependencies>
         <dependency>
-            <groupId>com.destroystokyo.paper</groupId>
+            <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <version>1.21.3-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.MineValley</groupId>
-            <artifactId>Core-API</artifactId>
-            <version>${api.version}</version>
+            <groupId>minevalley.core</groupId>
+            <artifactId>api</artifactId>
+            <version>1.298.1</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>LATEST</version>
+            <version>1.18.30</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${artifactId}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>enforce-java</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>${java.version}</version>
+                                </requireJavaVersion>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -1,54 +1,34 @@
 package minevalley.vince.template.module.commands;
 
-import minevalley.core.api.enums.FractionService;
-import minevalley.core.api.enums.TeamRank;
+import com.mojang.brigadier.arguments.StringArgumentType;
+import minevalley.core.api.commands.Commands;
 import minevalley.core.api.users.OnlineUser;
-import minevalley.core.api.utils.command.Command;
-import minevalley.core.api.utils.command.CommandOptions;
-import minevalley.core.api.utils.command.PlayerCommand;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 
-import java.util.List;
+public final class ExampleCommand {
 
-@CommandOptions(
-        commands = {"example", "ex"},   // command-spelling and aliases (Always have to be written in lower case!)
-        successMessage = "",    // message to print, if onCommand() returns SUCCESS
-        fractions = {FractionService.POLICE},
-        teamRanks = {TeamRank.DEVELOPMENT, TeamRank.ADMINISTRATION, TeamRank.SERVER_LEAD},
-        requireSupportService = false,  // user has to be in support service (if false, option can be omitted)
-        requireTeamService = false,     // user has to be in team service (if true, the teamranks-option is redundant)
-        ignoreRanks = false,    // command is accessible for everyone without any specific rank (makes all ranks-options redundant)
-        syntax = "example <necessary argument> [<unnecessary argument>]",   //correct syntax
-        correctSyntaxLength = 0,    // correct number of arguments
-        abuseWarning = false     // warning is sent into team-chat if user tries to perform this command without permission
-)
-public class ExampleCommand extends PlayerCommand {
-
-    @Override
-    public CommandResponse onCommand(OnlineUser onlineUser, String[] strings) {
-
-        // Command logic
-
-        return Command.CommandResponse.SUCCESS;
+    public static void initCommand() {
+        Commands.literal("example")
+                .requires(user -> user.isTeamler() && user.team().isOperator())
+                .executes(context -> {
+                    // Command logic
+                    final OnlineUser sender = context.getSender();
+                    // ...
+                })
+                .then(Commands.literal("optional-argument")
+                        .then(Commands.argument("necessary-argument", StringArgumentType.string())
+                                .requires(user -> user.isTeamler() && user.team().isOperator())
+                                .executes(context -> {
+                                    // Command logic
+                                    final OnlineUser sender = context.getSender();
+                                    final String necessaryArgument = context.getArgument("necessary-argument", String.class);
+                                    sender.sendMessage(
+                                            Component.text("Necessary Argument: ", NamedTextColor.AQUA)
+                                                    .append(Component.text(necessaryArgument, NamedTextColor.YELLOW))
+                                    );
+                                    // ...
+                                })
+                        ));
     }
-
-    // Can be omitted
-    @Override
-    public List<String> onTabComplete(OnlineUser user, String[] args) {
-
-        // Define tab-completions
-
-        return null;
-    }
-
-    // Can be omitted
-    @Override
-    public boolean isPermissioned(OnlineUser user) {
-
-        // Define specific checks
-
-        return true;
-    }
-
-
-
 }
