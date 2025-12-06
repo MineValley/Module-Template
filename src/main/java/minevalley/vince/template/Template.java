@@ -7,11 +7,8 @@ import minevalley.vince.template.module.commands.ExampleCommand;
 import minevalley.vince.template.module.listeners.LoggingListeners;
 import minevalley.vince.template.module.listeners.UserEnterTeamServiceListener;
 
-@Module(
-        name = "Template",
-        authors = "vince"
-)
 @SuppressWarnings("unused")
+@Module(name = "Template")
 public final class Template extends CoreModule {
 
     // TODO: Rename package (author and module name)
