@@ -1,4 +1,4 @@
-package minevalley.vince.template.module.commands;
+package minevalley.vince.template.module.command;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import minevalley.core.api.command.Commands;

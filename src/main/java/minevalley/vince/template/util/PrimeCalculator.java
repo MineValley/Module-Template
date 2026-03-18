@@ -1,4 +1,4 @@
-package minevalley.vince.template.utils;
+package minevalley.vince.template.util;
 
 import org.jetbrains.annotations.Contract;
 

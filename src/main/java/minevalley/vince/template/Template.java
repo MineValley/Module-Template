@@ -3,9 +3,9 @@ package minevalley.vince.template;
 import minevalley.core.api.Core;
 import minevalley.core.api.CoreModule;
 import minevalley.core.api.Module;
-import minevalley.vince.template.module.commands.ExampleCommand;
-import minevalley.vince.template.module.listeners.LoggingListeners;
-import minevalley.vince.template.module.listeners.UserEnterTeamServiceListener;
+import minevalley.vince.template.module.command.ExampleCommand;
+import minevalley.vince.template.module.listener.LoggingListeners;
+import minevalley.vince.template.module.listener.UserEnterTeamServiceListener;
 
 @SuppressWarnings("unused")
 @Module(name = "Template")

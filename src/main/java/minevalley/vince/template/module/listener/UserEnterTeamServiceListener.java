@@ -1,4 +1,4 @@
-package minevalley.vince.template.module.listeners;
+package minevalley.vince.template.module.listener;
 
 import minevalley.core.api.user.event.service.team.UserEnterTeamServiceEvent;
 import org.bukkit.event.EventHandler;
