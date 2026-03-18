@@ -55,7 +55,7 @@
         <dependency>
             <groupId>minevalley.core</groupId>
             <artifactId>api</artifactId>
-            <version>1.299.6</version>
+            <version>1.305.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
