@@ -1,8 +1,8 @@
 package minevalley.vince.template.module.commands;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
-import minevalley.core.api.commands.Commands;
-import minevalley.core.api.users.OnlineUser;
+import minevalley.core.api.command.Commands;
+import minevalley.core.api.user.OnlineUser;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 

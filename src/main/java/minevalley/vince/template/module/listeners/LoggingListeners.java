@@ -1,7 +1,7 @@
 package minevalley.vince.template.module.listeners;
 
 import minevalley.core.api.Core;
-import minevalley.core.api.utils.EventListener;
+import minevalley.core.api.event.EventListener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
