@@ -1,11 +1,11 @@
-package minevalley.vince.template.core;
+package eu.minevalley.template.core;
 
 import com.google.common.collect.Maps;
+import eu.minevalley.template.core.calender.Birthday;
+import eu.minevalley.template.core.calender.Season;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import minevalley.vince.template.core.calender.Birthday;
-import minevalley.vince.template.core.calender.Season;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnegative;

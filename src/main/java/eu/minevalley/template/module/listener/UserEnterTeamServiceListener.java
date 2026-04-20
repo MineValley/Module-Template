@@ -1,4 +1,4 @@
-package minevalley.vince.template.module.listener;
+package eu.minevalley.template.module.listener;
 
 import eu.minevalley.proxima.api.user.event.service.team.UserEnterTeamServiceEvent;
 import org.bukkit.event.EventHandler;

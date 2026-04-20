@@ -1,4 +1,4 @@
-package minevalley.vince.template.core.calender;
+package eu.minevalley.template.core.calender;
 
 import lombok.AccessLevel;
 import lombok.Getter;

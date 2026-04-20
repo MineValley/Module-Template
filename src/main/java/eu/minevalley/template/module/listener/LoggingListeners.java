@@ -1,4 +1,4 @@
-package minevalley.vince.template.module.listener;
+package eu.minevalley.template.module.listener;
 
 import eu.minevalley.proxima.api.Proxima;
 import eu.minevalley.proxima.api.event.EventListener;
