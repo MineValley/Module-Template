@@ -27,23 +27,6 @@
         </developer>
     </developers>
 
-    <repositories>
-        <repository>
-            <id>paper-mc</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
-        </repository>
-        <repository>
-            <id>core-api</id>
-            <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
-            <releases>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <dependencies>
         <!--suppress VulnerableLibrariesLocal -->
         <dependency>
@@ -65,6 +48,23 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>paper-mc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>core-api</id>
+            <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
+            <releases>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <finalName>${project.name}</finalName>
