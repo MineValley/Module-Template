@@ -1,18 +1,18 @@
 package minevalley.vince.template.module.listener;
 
-import minevalley.core.api.Core;
-import minevalley.core.api.event.EventListener;
+import eu.minevalley.proxima.api.Proxima;
+import eu.minevalley.proxima.api.event.EventListener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public final class LoggingListeners {
 
     public static void initListeners() {
-        Core.registerListener(PlayerJoinEvent.class, (EventListener<PlayerJoinEvent>) event -> {
+        Proxima.registerListener(PlayerJoinEvent.class, (EventListener<PlayerJoinEvent>) event -> {
             // Logic here
         });
 
-        Core.registerListener(PlayerQuitEvent.class, (EventListener<PlayerQuitEvent>) event -> {
+        Proxima.registerListener(PlayerQuitEvent.class, (EventListener<PlayerQuitEvent>) event -> {
             // Logic here
         });
     }

@@ -1,8 +1,8 @@
 package minevalley.vince.template;
 
-import minevalley.core.api.Core;
-import minevalley.core.api.CoreModule;
-import minevalley.core.api.Module;
+import eu.minevalley.core.api.Core;
+import eu.minevalley.core.api.CoreModule;
+import eu.minevalley.core.api.Module;
 import minevalley.vince.template.module.command.ExampleCommand;
 import minevalley.vince.template.module.listener.LoggingListeners;
 import minevalley.vince.template.module.listener.UserEnterTeamServiceListener;

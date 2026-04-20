@@ -1,8 +1,8 @@
 package minevalley.vince.template.module.command;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
-import minevalley.core.api.command.Commands;
-import minevalley.core.api.user.OnlineUser;
+import eu.minevalley.proxima.api.command.Commands;
+import eu.minevalley.proxima.api.user.ProxyUser;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 
@@ -13,7 +13,7 @@ public final class ExampleCommand {
                 .requires(user -> user.isTeamler() && user.team().isOperator())
                 .executes(context -> {
                     // Command logic
-                    final OnlineUser sender = context.getSender();
+                    final ProxyUser sender = context.getSender();
                     // ...
                 })
                 .then(Commands.literal("optional-argument")
@@ -21,7 +21,7 @@ public final class ExampleCommand {
                                 .requires(user -> user.isTeamler() && user.team().isOperator())
                                 .executes(context -> {
                                     // Command logic
-                                    final OnlineUser sender = context.getSender();
+                                    final ProxyUser sender = context.getSender();
                                     final String necessaryArgument = context.getArgument("necessary-argument", String.class);
                                     sender.sendMessage(
                                             Component.text("Necessary Argument: ", NamedTextColor.AQUA)
